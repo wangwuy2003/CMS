@@ -25,12 +25,14 @@
             $id = $_GET['id'];
             $each = (new CategoryService())->find($id);
             include APP_ROOT . '/app/view/category/edit.php';
+
         }
 
         public function update(){
             //goi service lay ham update
             (new CategoryService())->update($_POST);
-            $this->index();
+            $categories = (new CategoryService())->getAllCategory();
+            include APP_ROOT . '/app/view/category/index.php';
         }
 
         public function delete(){

@@ -10,7 +10,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Bài đăng</a>
+                    <a class="nav-link" href="?c=post">Bài đăng</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="?c=category" aria-disabled="true">Thể loại</a>

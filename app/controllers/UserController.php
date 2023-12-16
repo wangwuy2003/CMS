@@ -26,4 +26,15 @@
             $each = (new UserService())->find($id);
             include APP_ROOT . '/app/view/user/edit.php';
         }
+
+        public function update(){
+            (new UserService())->update($_POST);
+            $this->index();
+        }
+
+        public function delete() {
+            $id = $_GET['id'];
+            (new UserService())->delete($id);
+            $this->index();
+        }
     }

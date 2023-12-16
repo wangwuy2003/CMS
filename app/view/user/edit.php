@@ -14,24 +14,26 @@
     include_once  APP_ROOT . '/app/view/menu.php';
 ?>
 <div class="container">
-    <form action="?c=category&a=update" method="POST">
+    <form action="?c=user&a=update" method="POST">
         <h3 class="text-center text-success my-3">Cập nhật tài khoản</h3>
-        <input type="hidden" name="id" value="<?= $each->getId() ?>">
+        <label>
+            <input type="text" name="id" value="<?= $each->getId() ?>">
+        </label>
         <div class="mb-3">
             <label for="inputFirstName" class="form-label">First Name</label>
-            <input type="text" name="firstname" class="form-control" id="inputFirstName" aria-describedby="emailHelp" value="<?= $each->getFirstname() ?>">
+            <input type="text" name="firstname" class="form-control" id="inputFirstName" aria-describedby="emailHelp" value="<?= $each->getFirstName() ?>">
         </div>
         <div class="mb-3">
             <label for="inputLastName" class="form-label">Last Name</label>
-            <input type="text" name="lastname" class="form-control" id="inputLastName" aria-describedby="emailHelp" <?= $each->getLastname() ?>>
+            <input type="text" name="lastname" class="form-control" id="inputLastName" aria-describedby="emailHelp" value="<?= $each->getLastname() ?>">
         </div>
         <div class="mb-3">
             <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" <?= $each->getEmail() ?>>
+            <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" value="<?= $each->getEmail() ?>">
         </div>
         <div class="mb-3">
             <label for="inputPassword" class="form-label">Password</label>
-            <input type="text" name="password" class="form-control" id="inputPassword" aria-describedby="emailHelp" <?= $each->getPassword() ?>>
+            <input type="text" name="password" class="form-control" id="inputPassword" aria-describedby="emailHelp" value="<?= $each->getPassword() ?>">
         </div>
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
